@@ -1,0 +1,25 @@
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Build and packaging artifacts
+build/
+dist/
+*.egg-info/
+
+# Local editor and operating system files
+.DS_Store
+.vscode/
+
+# Large reference annotations
+/data/Homo_sapiens.GRCh38.107.gtf.gz
+/data/Homo_sapiens.GRCh38.107.gff3.gz
+
+# Generated test output
+/tests/test_to_gtf.gtf
