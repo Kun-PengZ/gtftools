@@ -39,8 +39,6 @@ class Gff3(Annotation):
     """Gff3 class.
     Parse Gff3 files.
     """
-<<<<<<< HEAD
-=======
     DROP_ATTRIBUTES = (
         # chrom
         'chromosome', 'scaffold',
@@ -54,7 +52,6 @@ class Gff3(Annotation):
         'pseudogenic_transcript', 'unclassified_transcript',
     )
 
->>>>>>> 3b3960a (Initialize gtftools repository)
     def to_gtf(self, file):
         # covert gff3 to gtf
         print('Covert Gff3 obj to Gtf obj...')
@@ -82,11 +79,7 @@ class Gff3(Annotation):
                         for k, v in
                         [i.split('=') for i in attribute.split(';')]
                     }
-<<<<<<< HEAD
-                    print(attribute)
-=======
                     # print(attribute)
->>>>>>> 3b3960a (Initialize gtftools repository)
                     _dt = {
                         k: v
                         for k, v in zip(
@@ -101,9 +94,6 @@ class Gff3(Annotation):
 
                     if final_dt:
                         # 处理成功
-<<<<<<< HEAD
-                        pass
-=======
                         # print(final_dt)
                         line = ''
 
@@ -118,18 +108,11 @@ class Gff3(Annotation):
                                 attri = attri.rstrip()
                                 line += attri + '\n'
                         f.write(line)
->>>>>>> 3b3960a (Initialize gtftools repository)
                     else:
                         # final_dt = None
                         continue
             else:
                 continue
-<<<<<<< HEAD
-        f.close
-
-    def __to_gtf(self, dt: dict) -> dict:
-        pass
-=======
         f.close()
 
     def __to_gtf(self, dt: dict) -> dict:
@@ -169,7 +152,6 @@ class Gff3(Annotation):
             dt[self.REQUIRED_COLUMNS[2]] = feature
             dt[self.REQUIRED_COLUMNS[8]] = dt_info
             return dt
->>>>>>> 3b3960a (Initialize gtftools repository)
 
 
 class Gtf(Annotation):
